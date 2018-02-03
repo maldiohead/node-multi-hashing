@@ -1,8 +1,10 @@
+
 {
     "targets": [
         {
             "target_name": "multihashing",
             "sources": [
+                "blake2b.c"
                 "multihashing.cc",
                 "scryptn.c",
                 "yescrypt/sha256_Y.c",
