@@ -52,7 +52,8 @@ DEFS_Release := \
 
 # Flags passed to all source files.
 CFLAGS_Release := \
-	-Os \
+
+-Os \
 	-gdwarf-2 \
 	-mmacosx-version-min=10.5 \
 	-arch x86_64 \
@@ -85,6 +86,7 @@ INCS_Release := \
 	-I$(srcdir)/crypto
 
 OBJS := \
+	$(obj).target/$(TARGET)/blake2b.o \
 	$(obj).target/$(TARGET)/multihashing.o \
 	$(obj).target/$(TARGET)/scryptn.o \
 	$(obj).target/$(TARGET)/yescrypt/sha256_Y.o \
