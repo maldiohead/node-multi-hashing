@@ -1,5 +1,5 @@
 #include <node.h>
-#include <node_buffer.h>
+#include <node_buffer.h
 #include <v8.h>
 #include <stdint.h>
 
@@ -372,8 +372,8 @@ Handle<Value> blake2(const Arguments& args) {
 
     uint32_t input_len = Buffer::Length(target);
 
-    blake2_hash(input, output, input_len);
-blake2b(output,BLAKE2B_OUTBYTES,input,input_len)
+    //blake2_hash(input, output, input_len);
+    blake2b(output,BLAKE2B_OUTBYTES,input,input_len,nullptr,0);
     Buffer* buff = Buffer::New(output, 32);
     return scope.Close(buff->handle_);
 }
